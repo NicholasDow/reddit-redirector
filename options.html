@@ -1,0 +1,48 @@
+<!-- options.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Website Redirect Options</title>
+  </head>
+  <body>
+    <div id="content">
+      <h1>Options</h1>
+      <hr>
+      <p>Add</p>
+      <form class="form-inline">
+        <fieldset>
+          <input type="text" id="from" placeholder="From" value="">
+          <input type="text" id="to" placeholder="To" value="">
+          <button type="button" class="btn" id="add"><i class="icon-plus"></i> Add</button>
+        </fieldset>
+      </form>
+      <div id="redirects">
+        <h3>Mappings</h3>
+        <table>
+          <thead>
+              <tr>
+                  <th>From</th>
+                  <th>To</th>
+                  <th width="80">&nbsp;</th>
+                  <th width="80">&nbsp;</th>
+            </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="options.js"></script>
+  <script id="table_row_tpl" type="text/x-javascript-tmpl">
+    <tr>
+      <td><input class="from" type="text" value="{{from}}"/></td>
+      <td><input class="to" type="text" value="{{to}}"/></td>
+      <td>
+        <button class="remove" value="{{id}}"><i class="icon-remove"></i> Delete</button>
+      </td>
+      <td>
+        <button class="edit" value="{{id}}"><i class="icon-edit"></i> Edit</button>
+      </td>
+    </tr>
+  </script>
+</html>

@@ -2,7 +2,7 @@
     // google is bitch made for getting rid of persistent in v3
     "manifest_version": 2,
     "name": "Reddit Redirector",
-    "version": "1.0",
+    "version": "1.1",
     "description": "Redirects www.reddit.com to a different website.",
     "icons": {
       "48": "icon_48.jpg"
@@ -11,9 +11,17 @@
       "scripts": ["background.js"],
       "persistent": true
     },
+    "options_page": "options.html",
+    "browser_action": {
+      "default_icon": {
+        "48": "icon_48.jpg"
+      },
+      "default_popup": "popup.html"
+    },
     "permissions": [
+      "<all_urls>",
       "webRequest",
-      "webRequestBlocking",
-      "*://*.reddit.com/*"
-    ]
-}
+      "webRequestBlocking"
+    ],
+    "content_security_policy": "script-src 'self' https://*.googleapis.com object-src 'self'"
+  }
