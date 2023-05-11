@@ -1,0 +1,17 @@
+{
+    "manifest_version": 3,
+    "name": "Reddit Redirector",
+    "version": "1.0",
+    "description": "Redirects www.reddit.com to a different website.",
+    "icons": {
+      "48": "icon_48.jpg"
+    },
+    "background": {
+      "service_worker": "background.js"
+    },
+    "permissions": [
+      "webRequest",
+      "webRequestBlocking",
+      "*://*.reddit.com/*"
+    ]
+}
